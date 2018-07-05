@@ -1,0 +1,10 @@
+<button (click)="displayElements()">{{mod}}</button>
+
+<ul class="dynamicList" id="dynamicList">
+  <li *ngFor="let item of listElements; let i = index" class="dynamicListItem" id="item{{i}}" [ngStyle]="{'left': item.position.left + '%', 'top': item.position.top + 'px'}">
+    <div>
+      <h2>{{item.title}}</h2>
+      <img src="{{item.image}}" alt="item.title">
+    </div>
+  </li>
+</ul>
